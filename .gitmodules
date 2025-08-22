@@ -1,3 +1,8 @@
 [submodule ".devcontainer/ESP32DevEnv"]
 	path = .devcontainer/ESP32DevEnv
 	url = git@github.com:kdimonych/ESP32DevEnv.git
+	branch = main
+[submodule "AbstractPlatform"]
+	path = AbstractPlatform
+	url = git@github.com:kdimonych/AbstractPlatform.git
+	branch = MultilayerDisplayDriver
