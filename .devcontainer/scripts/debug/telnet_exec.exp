@@ -1,0 +1,16 @@
+#!/usr/bin/expect -f
+
+set timeout 10
+set host [lindex $argv 0]
+set port [lindex $argv 1]
+set cmds [lindex $argv 2]
+
+spawn telnet $host $port
+expect ">"
+foreach cmd [split $cmds "\n"] {
+    if {[string trim $cmd] != ""} {
+        send "$cmd\r"
+        expect ">"
+    }
+}
+expect eof

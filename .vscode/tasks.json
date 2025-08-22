@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "esp32-flash",
+      "type": "shell",
+      "command": "${workspaceFolder}/.devcontainer/scripts/debug/run.sh",
+      "args": [
+        "${workspaceFolder}/${env:BUILD_DIR_NAME}"
+      ],
+      "presentation": {
+        "panel": "new"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

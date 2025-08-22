@@ -1,0 +1,43 @@
+{
+  "name": "ESP32DevEnv",
+  "build": {
+    "context": "ESP32DevEnv",
+    "dockerfile": "ESP32DevEnv/Dockerfile"
+  },
+  "capAdd": [
+    "SYS_PTRACE"
+  ],
+  "securityOpt": [
+    "seccomp=unconfined"
+  ],
+  "containerEnv": {
+    "HOST_WORKSPACE_PATH": "/Users/admin/Documents/Esp32/ESP32Template",
+    "BUILD_DIR_NAME": "build_gcc_esp32"
+  },
+  "customizations": {
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash",
+      "cmake.configureOnOpen": true,
+      "cmake.buildDirectory": "${workspaceFolder}/${env:BUILD_DIR_NAME}",
+      "cmake.generator": "Ninja",
+      "cmake.ninjaPath": "/usr/bin/ninja",
+      "clang-format.executable": "/usr/bin/clang-format",
+      "doxygen.runOnSave": true,
+      "doxygen.runOnSavePath": "${workspaceFolder}/docs/Doxyfile",
+      "terminal.integrated.inheritEnv": true
+    },
+    "extensions": [
+      "ms-vscode.cpptools",
+      "ms-vscode.cpptools-extension-pack",
+      "ms-vscode.cpptools-themes",
+      "xaver.clang-format",
+      "ms-vscode.cmake-tools",
+      "cschlosser.doxdocgen",
+      "betwo.vscode-doxygen-runner",
+      "yzhang.markdown-all-in-one",
+      "gruntfuggly.todo-tree",
+      "marus25.cortex-debug"
+    ]
+  },
+  "postCreateCommand": " "
+}

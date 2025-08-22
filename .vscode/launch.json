@@ -1,0 +1,31 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug ESP32 with external OpenOCD",
+            "type": "cortex-debug",
+            "request": "attach",
+            "servertype": "external",
+            "executable": "${workspaceRoot}/${env:BUILD_DIR_NAME}/template-project.elf",
+            "cwd": "${workspaceRoot}",
+            "gdbPath": "xtensa-esp32-elf-gdb",
+            "objdumpPath": "xtensa-esp32-elf-gdb",
+            "gdbTarget": "host.docker.internal:3333",
+            "device": "ESP32",
+            "breakAfterReset": true,
+            "runToEntryPoint": "app_main",
+            "preAttachCommands": [
+                "monitor reset halt",
+                "monitor reset run"
+            ],
+            "postAttachCommands": [
+                "monitor reset run",
+            ],
+            "showDevDebugOutput": "vscode",
+            "preLaunchTask": "esp32-flash",
+        }
+    ]
+}
