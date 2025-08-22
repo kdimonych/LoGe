@@ -43,15 +43,19 @@ endif()
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+add_subdirectory(AbstractPlatform)
+
 set(ELF_FILES ${CMAKE_PROJECT_NAME}.elf)
 add_executable(${ELF_FILES} src/main.cpp)
 
 # Link the static libraries to the executable
 if("${TARGET}" IN_LIST TARGETS)
-  target_link_libraries(${ELF_FILES} idf::freertos idf::spi_flash)
+  target_link_libraries(${ELF_FILES} idf::freertos idf::spi_flash
+                        abstract-platform.platform abstract-platform.common)
   # Attach additional targets to the executable file for flashing, linker script
   # generation, partition_table generation, etc.
   idf_build_executable(${ELF_FILES})
 else()
-  target_link_libraries(${ELF_FILES} stub::esp32 stub::freertos stub::spi_flash)
+  target_link_libraries(${ELF_FILES} stub::esp32 stub::freertos stub::spi_flash
+                        abstract-platform.platform abstract-platform.common)
 endif()

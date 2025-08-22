@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: CC0-1.0
  */
 
+#include <AbstractPlatform/platform/Platform.hpp>
+
 #include <cstdio>
 
 extern "C" {
