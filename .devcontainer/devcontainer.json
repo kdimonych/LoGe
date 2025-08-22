@@ -11,8 +11,8 @@
     "seccomp=unconfined"
   ],
   "containerEnv": {
-    "HOST_WORKSPACE_PATH": "/Users/admin/Documents/Esp32/ESP32Template",
-    "BUILD_DIR_NAME": "build_gcc_esp32"
+    "HOST_WORKSPACE_PATH": "/Users/admin/Documents/Esp32/LoGe",
+    "BUILD_DIR_NAME": "build_esp32"
   },
   "customizations": {
     "settings": {

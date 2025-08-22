@@ -9,7 +9,7 @@
             "type": "cortex-debug",
             "request": "attach",
             "servertype": "external",
-            "executable": "${workspaceRoot}/${env:BUILD_DIR_NAME}/template-project.elf",
+            "executable": "${workspaceRoot}/${env:BUILD_DIR_NAME}/LoGe.elf",
             "cwd": "${workspaceRoot}",
             "gdbPath": "xtensa-esp32-elf-gdb",
             "objdumpPath": "xtensa-esp32-elf-gdb",

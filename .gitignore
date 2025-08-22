@@ -1,4 +1,5 @@
 build
+build_esp32*
 build_gcc_*
 build_clang_*
 .ruff_cache
