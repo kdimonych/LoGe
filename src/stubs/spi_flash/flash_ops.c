@@ -6,7 +6,8 @@
 
 #include "esp_flash.h"
 
-esp_err_t esp_flash_get_size(esp_flash_t *chip, uint32_t *out_size) {
+esp_err_t esp_flash_get_size(esp_flash_t* chip, uint32_t* out_size)
+{
   *out_size = 1024 * 1024 * 1024;
   return ESP_OK;
 }

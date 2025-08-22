@@ -8,4 +8,7 @@
 
 #include <unistd.h>
 
-void vTaskDelay(const uint32_t xTicksToDelay) { sleep(xTicksToDelay); }
+void vTaskDelay(const uint32_t xTicksToDelay)
+{
+  sleep(xTicksToDelay);
+}

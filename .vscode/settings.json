@@ -111,5 +111,6 @@
     "${env:IDF_PATH}/../tools/riscv32-esp-elf-gdb/16.2_20250324/riscv32-esp-elf-gdb/bin"
   ],
   "cmake.automaticReconfigure": false,
-  "cmake.buildBeforeRun": false
+  "cmake.buildBeforeRun": false,
+  "clang-format.executable": "clang-format",
 }

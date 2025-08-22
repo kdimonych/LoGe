@@ -8,9 +8,12 @@
 #include <stdbool.h>
 
 extern void app_main(void);
-jmp_buf buf;
+jmp_buf     buf;
 
-int main(void) {
+int main(void)
+{
   setjmp(buf);
+
+  void;
   app_main();
 }

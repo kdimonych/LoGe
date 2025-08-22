@@ -87,10 +87,11 @@ repos:
 
   - repo: https://github.com/pre-commit/mirrors-clang-format
     # the revision below is corresponding to the clang-format version
-    rev: v20.1.0
+    rev: v20.1.8
     hooks:
       - id: clang-format
         name: check if cpp files adhere to clang format
+        types_or: [c++, c, cuda]
 
   - repo: https://github.com/renovatebot/pre-commit-hooks
     rev: 39.222.1

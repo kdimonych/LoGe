@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: CC0-1.0
  */
 
+#include <AbstractPlatform/common/BitOperations.hpp>
 #include <AbstractPlatform/platform/Platform.hpp>
 
 #include <cstdio>

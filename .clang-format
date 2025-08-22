@@ -112,14 +112,6 @@ SpaceBeforeParens: ControlStatements
 SortIncludes: CaseSensitive
 # DisableFormat: false
 # ...
-
----
-Language: C
-# Don't format objective-c files.
-BasedOnStyle: Google
-ColumnLimit: 100
-IndentWidth: 2
-#
 ---
 Language: ObjC
 # Don't format objective-c files.
