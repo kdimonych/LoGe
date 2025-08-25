@@ -1,0 +1,196 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 21,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "Host_Debug",
+      "description": "Debug build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_host",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "TARGET": "host"
+      }
+    },
+    {
+      "name": "esp32_Debug",
+      "description": "Debug build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "$env{IDF_PATH}/tools/cmake/toolchain-esp32.cmake",
+        "TARGET": "esp32"
+      }
+    },
+    {
+      "name": "esp32_Release",
+      "description": "Release build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TOOLCHAIN_FILE": "$env{IDF_PATH}/tools/cmake/toolchain-esp32.cmake",
+        "TARGET": "esp32"
+      }
+    },
+    {
+      "name": "esp32c2_Debug",
+      "description": "Debug build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32c2",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "$env{IDF_PATH}/tools/cmake/toolchain-esp32c2.cmake",
+        "TARGET": "esp32c2"
+      }
+    },
+    {
+      "name": "esp32c2_Release",
+      "description": "Release build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32c2",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TOOLCHAIN_FILE": "$env{IDF_PATH}/tools/cmake/toolchain-esp32c2.cmake",
+        "TARGET": "esp32c2"
+      }
+    },
+    {
+      "name": "esp32c3_Debug",
+      "description": "Debug build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32c3",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "$env{IDF_PATH}/tools/cmake/toolchain-esp32c3.cmake",
+        "TARGET": "esp32c3"
+      }
+    },
+    {
+      "name": "esp32c3_Release",
+      "description": "Release build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32c3",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TOOLCHAIN_FILE": "$env{IDF_PATH}/tools/cmake/toolchain-esp32c3.cmake",
+        "TARGET": "esp32c3"
+      }
+    },
+    {
+      "name": "esp32c6_Debug",
+      "description": "Debug build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32c6",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "$env{IDF_PATH}/tools/cmake/toolchain-esp32c6.cmake",
+        "TARGET": "esp32c6"
+      }
+    },
+    {
+      "name": "esp32c6_Release",
+      "description": "Release build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32c6",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TOOLCHAIN_FILE": "$env{IDF_PATH}/tools/cmake/toolchain-esp32c6.cmake",
+        "TARGET": "esp32c6"
+      }
+    },
+    {
+      "name": "esp32h2_Debug",
+      "description": "Debug build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32h2",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "$env{IDF_PATH}/tools/cmake/toolchain-esp32h2.cmake",
+        "TARGET": "esp32h2"
+      }
+    },
+    {
+      "name": "esp32h2_Release",
+      "description": "Release build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32h2",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TOOLCHAIN_FILE": "$env{IDF_PATH}/tools/cmake/toolchain-esp32h2.cmake",
+        "TARGET": "esp32h2"
+      }
+    },
+    {
+      "name": "esp32p4_Debug",
+      "description": "Debug build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32p4",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "$env{IDF_PATH}/tools/cmake/toolchain-esp32p4.cmake",
+        "TARGET": "esp32p4"
+      }
+    },
+    {
+      "name": "esp32p4_Release",
+      "description": "Release build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32p4",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TOOLCHAIN_FILE": "$env{IDF_PATH}/tools/cmake/toolchain-esp32p4.cmake",
+        "TARGET": "esp32p4"
+      }
+    },
+    {
+      "name": "esp32s2_Debug",
+      "description": "Debug build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32s2",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "$env{IDF_PATH}/tools/cmake/toolchain-esp32s2.cmake",
+        "TARGET": "esp32s2"
+      }
+    },
+    {
+      "name": "esp32s2_Release",
+      "description": "Release build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32s2",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TOOLCHAIN_FILE": "$env{IDF_PATH}/tools/cmake/toolchain-esp32s2.cmake",
+        "TARGET": "esp32s2"
+      }
+    },
+    {
+      "name": "esp32s3_Debug",
+      "description": "Debug build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32s3",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "$env{IDF_PATH}/tools/cmake/toolchain-esp32s3.cmake",
+        "TARGET": "esp32s3"
+      }
+    },
+    {
+      "name": "esp32s3_Release",
+      "description": "Release build",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32s3",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TOOLCHAIN_FILE": "$env{IDF_PATH}/tools/cmake/toolchain-esp32s3.cmake",
+        "TARGET": "esp32s3"
+      }
+    }
+  ]
+}

@@ -6,7 +6,91 @@
       "type": "shell",
       "command": "${workspaceFolder}/.devcontainer/scripts/debug/run.sh",
       "args": [
-        "${workspaceFolder}/${env:BUILD_DIR_NAME}"
+        "${workspaceFolder}/${env:BUILD_DIR_NAME_PREFIX}_esp32"
+      ],
+      "presentation": {
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "esp32c2-flash",
+      "type": "shell",
+      "command": "${workspaceFolder}/.devcontainer/scripts/debug/run.sh",
+      "args": [
+        "${workspaceFolder}/${env:BUILD_DIR_NAME_PREFIX}_esp32c2"
+      ],
+      "presentation": {
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "esp32c3-flash",
+      "type": "shell",
+      "command": "${workspaceFolder}/.devcontainer/scripts/debug/run.sh",
+      "args": [
+        "${workspaceFolder}/${env:BUILD_DIR_NAME_PREFIX}_esp32c3"
+      ],
+      "presentation": {
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "esp32c6-flash",
+      "type": "shell",
+      "command": "${workspaceFolder}/.devcontainer/scripts/debug/run.sh",
+      "args": [
+        "${workspaceFolder}/${env:BUILD_DIR_NAME_PREFIX}_esp32c6"
+      ],
+      "presentation": {
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "esp32h2-flash",
+      "type": "shell",
+      "command": "${workspaceFolder}/.devcontainer/scripts/debug/run.sh",
+      "args": [
+        "${workspaceFolder}/${env:BUILD_DIR_NAME_PREFIX}_esp32h2"
+      ],
+      "presentation": {
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "esp32p4-flash",
+      "type": "shell",
+      "command": "${workspaceFolder}/.devcontainer/scripts/debug/run.sh",
+      "args": [
+        "${workspaceFolder}/${env:BUILD_DIR_NAME_PREFIX}_esp32p4"
+      ],
+      "presentation": {
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "esp32s2-flash",
+      "type": "shell",
+      "command": "${workspaceFolder}/.devcontainer/scripts/debug/run.sh",
+      "args": [
+        "${workspaceFolder}/${env:BUILD_DIR_NAME_PREFIX}_esp32s2"
+      ],
+      "presentation": {
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "esp32s3-flash",
+      "type": "shell",
+      "command": "${workspaceFolder}/.devcontainer/scripts/debug/run.sh",
+      "args": [
+        "${workspaceFolder}/${env:BUILD_DIR_NAME_PREFIX}_esp32s3"
       ],
       "presentation": {
         "panel": "new"

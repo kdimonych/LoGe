@@ -12,13 +12,13 @@
   ],
   "containerEnv": {
     "HOST_WORKSPACE_PATH": "/Users/admin/Documents/Esp32/LoGe",
-    "BUILD_DIR_NAME": "build_esp32"
+    "BUILD_DIR_NAME_PREFIX": "build"
   },
   "customizations": {
     "settings": {
       "terminal.integrated.shell.linux": "/bin/bash",
       "cmake.configureOnOpen": true,
-      "cmake.buildDirectory": "${workspaceFolder}/${env:BUILD_DIR_NAME}",
+      "cmake.buildDirectory": "${workspaceFolder}/${env:BUILD_DIR_NAME_PREFIX}",
       "cmake.generator": "Ninja",
       "cmake.ninjaPath": "/usr/bin/ninja",
       "clang-format.executable": "/usr/bin/clang-format",

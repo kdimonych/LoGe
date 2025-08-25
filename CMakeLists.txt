@@ -1,19 +1,10 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.21)
 
 project(LoGe)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF) # Disable compiler-specific extensions
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-
-# Add GoogleTest
-include(FetchContent)
-FetchContent_Declare(googletest SOURCE_DIR
-                                ${CMAKE_SOURCE_DIR}/third_party/googletest)
-FetchContent_MakeAvailable(googletest)
-
-# Add AbstractPlatform
-add_subdirectory(AbstractPlatform)
 
 set(TARGETS
     "esp32"
@@ -24,6 +15,30 @@ set(TARGETS
     "esp32c6"
     "esp32h2"
     "esp32p4")
+
+# Add GoogleTest
+if(NOT "${TARGET}" IN_LIST TARGETS)
+  message(STATUS "Install GTest")
+  # Include GTest
+  option(BUILD_GMOCK ON) # disable if not needed
+  option(INSTALL_GTEST OFF) # don’t install
+  add_subdirectory(third_party/googletest)
+  set(GTest_DIR
+      "${CMAKE_CURRENT_BINARY_DIR}/third_party/googletest"
+      CACHE PATH "Path to GTest")
+  set(GMock_DIR
+      "${CMAKE_CURRENT_BINARY_DIR}/third_party/googletest/googlemock"
+      CACHE PATH "Path to GMock")
+  # In root CMakeLists.txt
+  set(CMAKE_PREFIX_PATH
+      "${CMAKE_PREFIX_PATH};${CMAKE_CURRENT_BINARY_DIR}/third_party/googletest")
+  set(CMAKE_PREFIX_PATH
+      "${CMAKE_PREFIX_PATH};"
+      "${CMAKE_CURRENT_BINARY_DIR}/third_party/googletest/googlemock")
+endif()
+
+# Add AbstractPlatform
+add_subdirectory(AbstractPlatform)
 
 if("${TARGET}" IN_LIST TARGETS)
   # Include for ESP-IDF build system functions
