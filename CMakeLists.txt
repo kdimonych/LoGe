@@ -4,6 +4,16 @@ project(LoGe)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF) # Disable compiler-specific extensions
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# Add GoogleTest
+include(FetchContent)
+FetchContent_Declare(googletest SOURCE_DIR
+                                ${CMAKE_SOURCE_DIR}/third_party/googletest)
+FetchContent_MakeAvailable(googletest)
+
+# Add AbstractPlatform
+add_subdirectory(AbstractPlatform)
 
 set(TARGETS
     "esp32"
@@ -40,10 +50,6 @@ else()
   add_subdirectory(src/stubs/freertos)
   add_subdirectory(src/stubs/spi_flash)
 endif()
-
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-
-add_subdirectory(AbstractPlatform)
 
 set(ELF_FILES ${CMAKE_PROJECT_NAME}.elf)
 add_executable(${ELF_FILES} src/main.cpp)

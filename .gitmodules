@@ -6,3 +6,6 @@
 	path = AbstractPlatform
 	url = git@github.com:kdimonych/AbstractPlatform.git
 	branch = MultilayerDisplayDriver
+[submodule "third_party/googletest"]
+	path = third_party/googletest
+	url = https://github.com/google/googletest.git
