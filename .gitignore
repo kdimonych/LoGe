@@ -2,3 +2,4 @@ build
 build_esp*
 .ruff_cache
 build_host
+sdkconfig
