@@ -20,21 +20,21 @@ set(TARGETS
 if(NOT "${TARGET}" IN_LIST TARGETS)
   message(STATUS "Install GTest")
   # Include GTest
-  option(BUILD_GMOCK ON) # disable if not needed
-  option(INSTALL_GTEST OFF) # don’t install
-  add_subdirectory(third_party/googletest)
-  set(GTest_DIR
-      "${CMAKE_CURRENT_BINARY_DIR}/third_party/googletest"
-      CACHE PATH "Path to GTest")
-  set(GMock_DIR
-      "${CMAKE_CURRENT_BINARY_DIR}/third_party/googletest/googlemock"
-      CACHE PATH "Path to GMock")
-  # In root CMakeLists.txt
-  set(CMAKE_PREFIX_PATH
-      "${CMAKE_PREFIX_PATH};${CMAKE_CURRENT_BINARY_DIR}/third_party/googletest")
-  set(CMAKE_PREFIX_PATH
-      "${CMAKE_PREFIX_PATH};"
-      "${CMAKE_CURRENT_BINARY_DIR}/third_party/googletest/googlemock")
+  set(INSTALL_GTEST
+      OFF
+      CACHE BOOL "" FORCE)
+  set(BUILD_GMOCK
+      ON
+      CACHE BOOL "" FORCE)
+  set(BUILD_GTEST
+      ON
+      CACHE BOOL "" FORCE)
+  # cmake-lint: disable=C0103
+  set(gtest_force_shared_crt
+      ON
+      CACHE BOOL "" FORCE)
+
+  add_subdirectory(${CMAKE_SOURCE_DIR}/third_party/googletest)
 endif()
 
 # Add AbstractPlatform
