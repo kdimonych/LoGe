@@ -16,6 +16,7 @@ extern "C" {
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "led_strip/led_strip.h"
 }
 
 extern "C" void app_main(void);
@@ -41,6 +42,8 @@ void app_main(void)
     printf("Get flash size failed");
     return;
   }
+
+  led_strip();
 
   printf("%dMB %s flash\n",
          flash_size / (1024 * 1024),

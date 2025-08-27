@@ -97,7 +97,18 @@
     "ranges": "cpp",
     "stop_token": "cpp",
     "filesystem": "cpp",
-    "__availability": "cpp"
+    "__availability": "cpp",
+    "led_strip_encoder.h": "c",
+    "task.h": "c",
+    "freertos.h": "c",
+    "led_strip.h": "c",
+    "esp_log.h": "c",
+    "rmt_types.h": "c",
+    "clk_tree_defs.h": "c",
+    "soc_caps.h": "c",
+    "param.h": "c",
+    "stdint.h": "c",
+    "stddef.h": "c"
   },
   "cmake.configureOnEdit": false,
   "cmake.additionalCompilerSearchDirs": [
