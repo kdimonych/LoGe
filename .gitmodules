@@ -9,3 +9,9 @@
 [submodule "third_party/googletest"]
 	path = third_party/googletest
 	url = https://github.com/google/googletest.git
+[submodule "AsyncTCP"]
+	path = AsyncTCP
+	url = https://github.com/ESP32Async/AsyncTCP.git
+[submodule "ESPAsyncWebServer"]
+	path = ESPAsyncWebServer
+	url = https://github.com/ESP32Async/ESPAsyncWebServer.git
