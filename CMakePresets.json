@@ -30,8 +30,7 @@
     {
       "name": "esp32_Release",
       "description": "Release build",
-      "generator": "Ninja",
-      "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32",
+      "inherits": "esp32_Debug",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
         "CMAKE_TOOLCHAIN_FILE": "$env{IDF_PATH}/tools/cmake/toolchain-esp32.cmake",
@@ -40,8 +39,7 @@
     },
     {
       "name": "esp32c2_Debug",
-      "description": "Debug build",
-      "generator": "Ninja",
+      "inherits": "esp32_Debug",
       "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32c2",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
@@ -51,8 +49,7 @@
     },
     {
       "name": "esp32c2_Release",
-      "description": "Release build",
-      "generator": "Ninja",
+      "inherits": "esp32_Release",
       "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32c2",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
@@ -62,8 +59,7 @@
     },
     {
       "name": "esp32c3_Debug",
-      "description": "Debug build",
-      "generator": "Ninja",
+      "inherits": "esp32_Debug",
       "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32c3",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
@@ -73,8 +69,7 @@
     },
     {
       "name": "esp32c3_Release",
-      "description": "Release build",
-      "generator": "Ninja",
+      "inherits": "esp32_Release",
       "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32c3",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
@@ -84,8 +79,7 @@
     },
     {
       "name": "esp32c6_Debug",
-      "description": "Debug build",
-      "generator": "Ninja",
+      "inherits": "esp32_Debug",
       "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32c6",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
@@ -95,8 +89,7 @@
     },
     {
       "name": "esp32c6_Release",
-      "description": "Release build",
-      "generator": "Ninja",
+      "inherits": "esp32_Release",
       "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32c6",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
@@ -106,8 +99,7 @@
     },
     {
       "name": "esp32h2_Debug",
-      "description": "Debug build",
-      "generator": "Ninja",
+      "inherits": "esp32_Debug",
       "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32h2",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
@@ -117,8 +109,7 @@
     },
     {
       "name": "esp32h2_Release",
-      "description": "Release build",
-      "generator": "Ninja",
+      "inherits": "esp32_Release",
       "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32h2",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
@@ -128,8 +119,7 @@
     },
     {
       "name": "esp32p4_Debug",
-      "description": "Debug build",
-      "generator": "Ninja",
+      "inherits": "esp32_Debug",
       "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32p4",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
@@ -139,8 +129,7 @@
     },
     {
       "name": "esp32p4_Release",
-      "description": "Release build",
-      "generator": "Ninja",
+      "inherits": "esp32_Release",
       "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32p4",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
@@ -150,8 +139,7 @@
     },
     {
       "name": "esp32s2_Debug",
-      "description": "Debug build",
-      "generator": "Ninja",
+      "inherits": "esp32_Debug",
       "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32s2",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
@@ -161,8 +149,7 @@
     },
     {
       "name": "esp32s2_Release",
-      "description": "Release build",
-      "generator": "Ninja",
+      "inherits": "esp32_Release",
       "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32s2",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
@@ -172,8 +159,7 @@
     },
     {
       "name": "esp32s3_Debug",
-      "description": "Debug build",
-      "generator": "Ninja",
+      "inherits": "esp32_Debug",
       "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32s3",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
@@ -183,8 +169,7 @@
     },
     {
       "name": "esp32s3_Release",
-      "description": "Release build",
-      "generator": "Ninja",
+      "inherits": "esp32_Release",
       "binaryDir": "${sourceDir}/$env{BUILD_DIR_NAME_PREFIX}_esp32s3",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
